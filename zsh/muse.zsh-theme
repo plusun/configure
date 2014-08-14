@@ -8,15 +8,22 @@ autoload -U add-zsh-hook
 PROMPT_SUCCESS_COLOR=$FG[117]
 PROMPT_FAILURE_COLOR=$FG[124]
 PROMPT_VCS_INFO_COLOR=$FG[242]
-PROMPT_USER_INFO_COLOR=$FG[242]
-PROMPT_TIME_COLOR=$FG[242]
+PROMPT_USER_INFO_COLOR=$FG[080]
+PROMPT_TIME_COLOR=$FG[140]
 PROMPT_PROMPT=$FG[077]
 GIT_DIRTY_COLOR=$FG[133]
 GIT_CLEAN_COLOR=$FG[118]
 GIT_PROMPT_INFO=$FG[012]
 
-PROMPT='%E%B%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}%b %{$PROMPT_TIME_COLOR%}%T%{$reset_color%} %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}
+function system_info
+{
+    echo $(uname -s -r);
+}
+
+PROMPT='
+%{$PROMPT_TIME_COLOR%}[%{$(system_info)%}]%{$reset_color%} %B%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}%b %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}
 %{$PROMPT_USER_INFO_COLOR%}%n%{$reset_color%}@%{$PROMPT_SUCCESS_COLOR%}%M%{$reset_color%} %{$PROMPT_PROMPT%}%%%{$reset_color%} '
+RPROMPT='%{$PROMPT_TIME_COLOR%}%T%{$reset_color%}'
 
 #RPS1="${return_code}"
 
