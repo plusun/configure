@@ -1,0 +1,2 @@
+keymap:
+	cp Xmodmap ~/.Xmodmap
