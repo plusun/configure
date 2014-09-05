@@ -44,20 +44,20 @@
 ;;加入文件
 ;(add-to-list 'load-path "~/elisp")
 
-;;php-mode
-(load "~/elisp/php-mode.el")
-(require 'php-mode)
-(add-hook 'php-mode-user-hook 'turn-on-font-lock)
-(setq tab-width 2)
-;;multi-web-mode
-(load "~/elisp/multi-web-mode.el")
-(require 'multi-web-mode)
-(setq mweb-default-major-mode 'html-mode)
-(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
-		  (js-mode "<script[^>]*>" "</script>")
-		  (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
-(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
-(multi-web-global-mode 1)
+;; ;;php-mode
+;; (load "~/elisp/php-mode.el")
+;; (require 'php-mode)
+;; (add-hook 'php-mode-user-hook 'turn-on-font-lock)
+;; (setq tab-width 2)
+;; ;;multi-web-mode
+;; (load "~/elisp/multi-web-mode.el")
+;; (require 'multi-web-mode)
+;; (setq mweb-default-major-mode 'html-mode)
+;; (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+;; 		  (js-mode "<script[^>]*>" "</script>")
+;; 		  (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
+;; (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
+;; (multi-web-global-mode 1)
 
 ;; LaTeX设置
 ;(load "auctex.el" nil t t)
@@ -123,3 +123,10 @@
       kept-new-versions 6
       kept-old-versions 2
       version-control t)
+
+;; ruby mode
+(add-to-list 'load-path "~/elisp/ruby-mode")
+(add-to-list 'auto-mode-alist
+	     '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist
+	     '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
