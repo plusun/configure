@@ -1,6 +1,10 @@
-all: 
+all:
+	echo "What you want?"
+simple:
 	(cd emacs; make)
 	(cd zsh; make)
 	(cd tmux; make)
-keybrd:
+noHhkb:
 	(cd keymap; make)
+dorm: simple
+	(cd ssh; make)
