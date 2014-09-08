@@ -1,0 +1,15 @@
+Host rvyatta
+     HostName 202.120.40.82
+     User vyatta
+Host rplusun
+     HostName 192.168.12.153
+     User zhengy
+     ProxyCommand ssh rvyatta nc %h %p 2>/dev/null
+Host rts850
+     HostName ts850
+     User zhengy
+     ProxyCommand ssh rvyatta nc %h %p 2>/dev/null
+Host rr910 
+     HostName r910
+     User zhengy
+     ProxyCommand ssh rvyatta nc %h %p 2>/dev/null
