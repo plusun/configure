@@ -1,5 +1,5 @@
 all:
-	echo "What you want?"
+	@echo "What you want?"
 simple:
 	(cd emacs; make)
 	(cd zsh; make)
