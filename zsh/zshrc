@@ -73,7 +73,14 @@ export PATH=$PATH:/bin
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# shortcuts
 alias e='emacs -nw'
+alias emax='emacs -nw'
+alias c='clear'
+alias m='make'
+alias l='ls'
+
 # tmux setting
 [[ $- != *i* ]] && return
 [[ -z "$TMUX" ]] && exec tmux
