@@ -71,6 +71,9 @@ export PATH=$PATH:/bin
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Cursor color
+echo -ne "\033]12;lightgreen\007"
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias e='emacs -nw'
