@@ -6,7 +6,7 @@
 ;     (color-theme-initialize)
 ;     (color-theme-hober)))
 ;; goto line
-(global-set-key (kbd "C-x g") 'goto-line)
+;(global-set-key (kbd "C-x g") 'goto-line)
 ;;换行自动缩进
 ;(global-set-key (kbd "RET") 'newline-and-indent)
 ;;将文件重载revert-buffer函数设置为快捷键

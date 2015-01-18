@@ -72,7 +72,7 @@ export PATH=$PATH:/bin
 # export ARCHFLAGS="-arch x86_64"
 
 # Cursor color
-echo -ne "\033]12;cyan\007"
+# echo -ne "\033]12;cyan\007"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
