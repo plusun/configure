@@ -87,3 +87,7 @@ alias l='ls'
 # tmux setting
 [[ $- != *i* ]] && return
 [[ -z "$TMUX" ]] && exec tmux
+
+# X clipbrd shrtcuts
+alias xcopy='xclip -sel clip'
+alias x='xcopy'
